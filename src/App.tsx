@@ -57,6 +57,9 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>Shop</h1>
+        <div className="cart-info">
+          Cart Items: {cartItems.reduce((total, item) => total + item.quantity, 0)}
+        </div>
       </header>
       <main>
         <ProductList products={products} onAddToCart={handleAddToCart}/>
